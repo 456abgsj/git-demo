@@ -1,0 +1,55 @@
+git commit -m "first commit" hello.txt
+表示将一个文件存入提交本地库
+
+git log
+表示查询详细的命令
+
+git reflog
+查看精简的版本信息
+
+vim 文件名
+表示打开一个文件
+
+i
+表示对文件进行修改
+
+esc
+表示退出修改
+
+:wq
+表示退出
+
+git reset --hard 版本号
+表示穿梭到指定的版本
+
+版本号通过git reflog 进行获得
+
+git branch -v
+可以查看分治
+
+git checkout 分治名
+可以移动到目标分治
+
+git branch 分支名
+创建目标分支
+
+分支修改完毕文件后要将文件添加到暂存区和本地库
+
+git merge 目标分支名
+合并分支如果两个分支之前是在同一个版本一个分支进行了修改另外一个分支没有进行修改
+可以视为正常的分支合并合并为最新的版本即可
+如果两个分支都进行了修改那么就会发生版本冲突的问题这时候你就需要对内容进行具体的选择
+
+修改完毕后需要将其添加到暂存区和本地库
+添加到本地库的时候
+git commit -m “版本名”
+
+git remote -v
+查看远程库的别名
+
+git remote add 别名  远程库http
+
+git push 远程库名字 分支
+例如：git push git-demo master
+
+将本地库的文件推送到远程库中
