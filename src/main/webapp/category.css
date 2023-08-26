@@ -1,0 +1,145 @@
+* {
+    font-family: "Microsoft YaHei UI Light";
+}
+
+@font-face {
+    font-family: "iconfont"; /* Project id 4070504 */
+    src: url('font_delete/iconfont.woff2?t=1684399067818') format('woff2'),
+    url('font_delete/iconfont.woff?t=1684399067818') format('woff'),
+    url('font_delete/iconfont.ttf?t=1684399067818') format('truetype');
+}
+
+
+body{
+    background: url(./asset/bg21.png) no-repeat top;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.admin{
+
+    width: 100vw;
+    height: 100vh;
+    /*background-color: #fff;*/
+    /*border-radius: 40px;*/
+    position: absolute;
+    left: 40%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    /*display: flex;*/
+}
+
+.line {
+    width: 800px;
+    height: 1px;
+    background: rgba(0, 0, 0, 0.5);
+    margin: 20px 25px;
+    transition: 0.5s;
+}
+.line1 {
+    width: 1px;
+    height:80px;
+    background: rgba(0, 0, 0, 0.5);
+    transition: 0.5s;
+}
+
+
+
+.category{
+    width: 100%;
+    /*margin-top: 10vh;*/
+    margin-left: 0;
+    font-size: 0;
+    position: relative;
+    /*background-color: #9a6e3a;*/
+
+}
+.category li{
+
+    /*display: inline-block;*/
+    margin: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+
+
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 40px;
+    box-sizing: border-box;
+    /*padding: 0 100px;*/
+    background-color: #ffa9b1;
+}
+
+.input-items {
+
+    width: 30vw;
+    height: 20px;
+    margin-left: 100px;
+    margin-right: 0;
+}
+
+.input-items .inputs {
+    width: 80%;
+    height: 40px;
+    border-radius: 10px;
+    margin-left: 30px;
+    border: 1px solid rgb(227, 227, 227);
+    padding: 20px;
+    /*padding: 0px 0px 0px 0px;*/
+    box-sizing: border-box;
+    outline: none;
+    transition: 0.5s;
+}
+
+
+.btn{
+    width: 30%;
+    height: 40px;
+    background-color: rgb(128, 106, 196);
+    border: 0;
+    border-radius: 10px;
+
+    color: #fff;
+    font-size: 25px;
+    margin: 20px 250px;
+    cursor: pointer;
+}
+
+
+.btn1{
+    width: 40px;
+    height: 40px;
+    border: 0;
+    border-radius: 10px;
+    background-color: rgba(0,0,0,0);
+
+    margin-left: 0;
+    color: rgba(0,0,0,0.6);
+    cursor: pointer;
+    font-family: "iconfont" !important;
+    font-size: 40px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

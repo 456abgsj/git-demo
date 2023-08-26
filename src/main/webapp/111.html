@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>电影海报</title>
+    <style>
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .poster {
+            width: 200px;
+            height: 300px;
+            margin: 10px;
+            border: 1px solid #ccc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+        }
+
+        .pagination {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .pagination a {
+            display: inline-block;
+            padding: 5px 10px;
+            background-color: #f2f2f2;
+            color: #333;
+            text-decoration: none;
+            border: 1px solid #ccc;
+            margin-right: 5px;
+        }
+
+        .pagination a.active {
+            background-color: #333;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+<div class="container" id="posterContainer">
+    <!-- 海报内容将由 JavaScript 动态生成 -->
+</div>
+
+<div class="pagination" id="paginationContainer">
+    <!-- 分页链接将由 JavaScript 动态生成 -->
+</div>
+
+<script>
+    // 海报数据
+    var posters = [
+        // 这里填入每个海报的图片路径
+        "1.img", "2.img", "3.img", /* ... */ "50.img"
+    ];
+
+    var postersPerPage = 12; // 每页显示的海报数量
+    var totalPages = Math.ceil(posters.length / postersPerPage); // 总页数
+
+    var currentPage = 1; // 当前页数，默认为第一页
+
+    function generatePosters() {
+        var container = document.getElementById("posterContainer");
+        container.innerHTML = "";
+
+        var startPoster = (currentPage - 1) * postersPerPage;
+        var endPoster = Math.min(startPoster + postersPerPage, posters.length);
+
+        for (var i = startPoster; i < endPoster; i++) {
+            var poster = document.createElement("div");
+            poster.className = "poster";
+
+            var img = document.createElement("img");
+            img.src = posters[i];
+            img.alt = "Movie Poster";
+
+            poster.appendChild(img);
+            container.appendChild(poster);
+        }
+    }
+
+    function generatePagination() {
+        var container = document.getElementById("paginationContainer");
+        container.innerHTML = "";
+
+        var prevLink = document.createElement("a");
+        prevLink.href = "#";
+        prevLink.textContent = "上一页";
+        prevLink.addEventListener("click", function() {
+            if (currentPage > 1) {
+                currentPage--;
+                generatePosters();
+                generatePagination();
+            }
+        });
+        container.appendChild(prevLink);
+
+        for (var i = 1; i <= totalPages; i++) {
+            var link = document.createElement("a");
+            link.href = "#";
+            link.textContent = i;
+            if (i === currentPage) {
+                link.className = "active";
+            }
+
+            link.addEventListener("click", function() {
+                currentPage = parseInt(this.textContent);
+                generatePosters();
+                generatePagination();
+            });
+
+            container.appendChild(link);
+        }
+
+        var nextLink = document.createElement("a");
+        nextLink.href = "#";
+        nextLink.textContent = "下一页";
+        nextLink.addEventListener("click", function() {
+            if (currentPage < totalPages) {
+                currentPage++;
+                generatePosters();
+                generatePagination();
+            }
+        });
+        container.appendChild(nextLink);
+    }
+
+    generatePosters();
+    generatePagination();
+</script>
+</body>
+</html>

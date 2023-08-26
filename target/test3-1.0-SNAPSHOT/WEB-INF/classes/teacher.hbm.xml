@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <!-- 建立类与表的映射 -->
+    <class name="com.wang.bean.user" table="user">
+        <!-- 建立类中的属性与表中的主键相对应 -->
+        <id name="userid" column="userid">
+            <!-- 主键的生成策略，后面会讲，现在使用的是本地生成策略 -->
+            <generator class="native" />
+        </id>
+        <!-- 建立类中的普通属性和表中的字段相对应 -->
+        <property name="username" column="username" />
+        <property name="password" column="password" />
+    </class>
+
+
+    <!-- 建立类与表的映射 -->
+    <class name="com.wang.bean.news" table="news">
+        <!-- 建立类中的属性与表中的主键相对应 -->
+        <id name="newsid" column="newsid">
+            <!-- 主键的生成策略，后面会讲，现在使用的是本地生成策略 -->
+            <generator class="native" />
+        </id>
+        <!-- 建立类中的普通属性和表中的字段相对应 -->
+        <property name="title" column="title" />
+        <property name="author" column="author" />
+        <property name="message" column="message"/>
+        <property name="url" column="url"/>
+    </class>
+
+
+    <!-- 建立类与表的映射 -->
+    <class name="com.wang.bean.film" table="film">
+        <!-- 建立类中的属性与表中的主键相对应 -->
+        <id name="filmid" column="filmid">
+            <!-- 主键的生成策略，后面会讲，现在使用的是本地生成策略 -->
+            <generator class="native" />
+        </id>
+        <!-- 建立类中的普通属性和表中的字段相对应 -->
+        <property name="name" column="name" />
+        <property name="author" column="author" />
+        <property name="introduction" column="introduction"/>
+        <property name="typeid" column="typeid"/>
+        <property name="area" column="area"/>
+        <property name="time" column="time"/>
+        <property name="address" column="address"/>
+    </class>
+
+
+    <class name="com.wang.bean.type" table="type">
+        <!-- 建立类中的属性与表中的主键相对应 -->
+        <id name="typeid" column="typeid">
+            <!-- 主键的生成策略，后面会讲，现在使用的是本地生成策略 -->
+            <generator class="native" />
+        </id>
+        <!-- 建立类中的普通属性和表中的字段相对应 -->
+        <property name="typename" column="typename" />
+    </class>
+</hibernate-mapping>

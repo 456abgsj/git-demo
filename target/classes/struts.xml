@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN" "http://struts.apache.org/dtds/struts-2.3.dtd">
+         <struts>
+    <package name="basePackage" extends="struts-default">
+        <action name="loginaction" class="com.wang.controller.userController.LoginAction">
+            <result name="success">doo.jsp</result>
+            <result  name="input">login.jsp</result>
+        </action>
+        <action name="registeraction" class="com.wang.controller.userController.registeraction">
+            <result name="success1">login.jsp</result>
+        </action>
+
+
+        <action name="Addnewsaction" class="com.wang.controller.newsController.newsAddAction">
+            <result name="success2">main.jsp</result>
+        </action>
+
+        <action name="pageAction" class="com.wang.controller.userController.pageAction">
+            <result name="good">main.jsp</result>
+        </action>
+
+        <action name="getfilmAction" class="com.wang.controller.filmController.getfilmAction">
+            <result name="success2">guanlixiugai.jsp</result>
+        </action>
+
+
+        <action name="addfilmAction" class="com.wang.controller.filmController.AddFilmAction">
+            <result name="success3">main.jsp</result>
+        </action>
+
+        <action name="getalltypeaction" class="com.wang.controller.typeController.getalltypeController">
+            <result name="success">category.jsp</result>
+        </action>
+
+        <action name="selectAction" class="com.wang.controller.newsController.selectnewsAction">
+            <result name="SUCCESS">managenewsxiugai.jsp</result>
+        </action>
+
+
+        <action name="updatefilmAction" class="com.wang.controller.filmController.updatefilmAction">
+            <result name="success3">main.jsp</result>
+        </action>
+
+        <action name="updatenewsAction" class="com.wang.controller.newsController.updatenewsAction">
+            <result name="SUCCESS">main.jsp</result>
+        </action>
+
+
+    </package>
+
+    <package name="default" extends="json-default">
+        <action name="testAction" class="com.wang.controller.newsController.testAction" method="jsonTest">
+            <result name="SUCCESS">
+                <param name="root">object</param>
+            </result>
+        </action>
+    </package>
+     </struts>

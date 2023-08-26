@@ -1,0 +1,316 @@
+* {
+    font-family: "Microsoft YaHei UI Light";
+}
+
+@font-face {
+    font-family: "iconfont"; /* Project id 4070504 */
+    src: url('/font_search/iconfont.woff2?t=1684398198036') format('woff2'),
+    url('/font_search/iconfont.woff?t=1684398198036') format('woff'),
+    url('/font_search/iconfont.ttf?t=1684398198036') format('truetype');
+}
+
+
+body{
+    background: url(./asset/bg21.png) no-repeat top;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.content {
+    width: 100vw;
+    height: 100vh;
+    background:rgba(0,0,0,0);
+    position: relative;
+}
+
+.content .form-wrapper {
+    /*position: fixed;*/
+    /*left: 50%;*/
+    /*top: 50%;*/
+    /*transform: translate(-50%, -50%);*/
+    backdrop-filter: blur(10px);
+    width: 70vw;
+    height: 80vh;
+    background-color: rgba(0, 0, 0,0.1);
+    border-radius: 40px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    /*display: flex;*/
+}
+
+.content.form-wrapper.tab{
+    /*width: 70vw;*/
+    /*height: 60%;*/
+}
+
+.content.form-wrapper.tab td{
+    /*width: 70vw;*/
+    /*height: 60%;*/
+    padding: 0;
+}
+
+
+.content .form-wrapper h1 {
+
+    font-size: 30px;
+    text-align: center;
+}
+
+.rowline {
+    /*width: 1px;*/
+    height: 1px;
+    background: rgba(0, 0, 0, 0.5);
+    margin: 20px 25px;
+    transition: 0.5s;
+
+}
+.colline {
+    width: 1px;
+    /*height: 1px;*/
+    background: rgba(0, 0, 0, 0.5);
+    margin: 20px 25px;
+    transition: 0.5s;
+
+}
+.line {
+    width: 1px;
+    height: 225px;
+    background: rgba(0, 0, 0, 0.5);
+    margin: 20px 25px;
+    transition: 0.5s;
+}
+
+
+.content .form-wrapper .input-items {
+
+    width: 30vw;
+    height: 20px;
+    margin: 20px 20px;
+}
+
+#input-search{
+
+    width: 30vw;
+    height: 20px;
+    margin: 20px 20px;
+
+    /*width: 100%;*/
+    /*height: 40px;*/
+    border-radius: 10px;
+    border: 1px solid rgb(227, 227, 227);
+    padding: 20px;
+    box-sizing: border-box;
+    outline: none;
+    transition: 0.5s;
+}
+
+
+.content .form-wrapper .input-items .inputs {
+    width: 100%;
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid rgb(227, 227, 227);
+    padding: 20px;
+    box-sizing: border-box;
+    outline: none;
+    transition: 0.5s;
+}
+
+
+
+.content .form-wrapper .input-items .inputs:focus {
+    border:1px solid rgb(128, 106, 196);
+}
+
+
+
+.content.form-wrapper.input-items.imgdiv{
+    border-radius: 10px;
+    background-color: #ffffff;
+
+}
+
+  .textarea{
+    width: 60vw;
+    height: 80px;
+      font-family: "Microsoft YaHei UI Light", Courier, monospace;
+    border-radius: 10px;
+    border: 1px none rgb(227, 227, 227);
+    box-sizing: border-box;
+    outline: none;
+    transition: 0.5s;
+}
+
+.textareaBig{
+    width: 60vw;
+    height: 180px;
+    font-family: "Microsoft YaHei UI Light", Courier, monospace;
+    border-radius: 10px;
+    border: 1px none rgb(227, 227, 227);
+    box-sizing: border-box;
+    outline: none;
+    transition: 0.5s;
+}
+
+.textarea:focus {
+    border:1px solid rgb(128, 106, 196);
+}
+
+.textareaBig:focus {
+    border:1px solid rgb(128, 106, 196);
+}
+
+.select{
+    width: 30%;
+    height: 40px;
+    border-radius: 10px;
+    border: 1px none rgb(227, 227, 227);
+    outline: none;
+    /*box-sizing: border-box;*/
+    /*padding: 10px;*/
+}
+.select:focus {
+    border:1px solid rgb(128, 106, 196);
+}
+
+
+.inputFile{
+    height: 40px;
+    border-radius: 10px;
+    border: 1px none rgb(227, 227, 227);
+    outline: none;
+}
+
+
+.content .form-wrapper .input-items .prompt {
+    float: right;
+    font-weight: 600;
+    text-align: right;
+    margin: 5px 0;
+    font-size: 13px;
+    cursor: pointer;
+}
+.content .form-wrapper .btn {
+    width: 40%;
+    height: 50px;
+    background-color: rgb(128, 106, 196);
+    border: 0;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 25px;
+    margin: 20px 0;
+    cursor: pointer;
+    align-self: center;
+}
+
+.content .form-wrapper .btnSma {
+    width: 30%;
+    height: 40px;
+    background-color: rgb(128, 106, 196);
+    border: 0;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 25px;
+    margin: 20px 0;
+    cursor: pointer;
+
+}
+
+.content .form-wrapper .btnSma1 {
+    width: 20%;
+    height: 40px;
+    background-color: rgb(128, 106, 196);
+    border: 0;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 25px;
+    margin: 20px 0;
+    cursor: pointer;
+
+}
+
+
+
+.content.form-wrapper.search-box {
+    font-family: FontAwesome;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #ffffff;
+    height: 40px;
+    border: 10px;
+    border-radius: 40px;
+    padding: 10px;
+    opacity: 0;
+    transition-delay: 99999999s;
+    transition-duration: 1s;
+}
+
+.search-box:hover>.search-txt {
+    width: 800px;
+    padding: 0 6px;
+}
+
+.search-box:hover>.search-btn {
+    color: white;
+    background: black;
+}
+
+.search-btn {
+    transition: 0.5s;
+    font-size: 25px;
+    color: black;
+    float: right;
+    width: 40px;
+    height: 40px;
+    border: 10px;
+    border-radius: 50%;
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-family: "iconfont" !important;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+}
+
+.search-txt {
+    border: none;
+    align-content: center;
+    background: none;
+    outline: none;
+    float: left;
+    padding: 0;
+    color: rgb(51, 159, 150);
+    font-size: 16px;
+    transition: 0.6s;
+    line-height: 50px;
+    width: 0px;
+}
+@keyframes flash {
+    50% {
+        transform: scale(1.5);
+    }
+
+    80% {
+        transform: rotate(-60deg);
+    }
+
+    100% {
+        transform: rotate(30deg);
+    }
+
+
+}
+html:hover .search-box {
+    opacity: 1;
+    transition-delay: 0s;
+    transition-duration: 0s;
+}
+
